@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+    margin: 7% auto 5% auto;
+}
+
+p{
+    width: 50%;
+    margin: 0px auto 2% auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+div#buttons{
+    padding: 0 350px 0 350px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div#image-wrapper{
+    width: 300px;
+    height: 300px;
+    margin: 0px auto 40px auto;
+    border: none;   /* JDで 2px solid #000 に切り替えます */   
+    border-radius: 50%;
+    background-size: cover;
+}
+
+a#toHP{
+    border: 2px solid #000;
+    width: fit-content;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+a#toHP:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+a#toNL{
+    border: 2px solid #000;
+    width: fit-content;
+    text-decoration: none;
+    color: #000;
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+a#toNL:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}

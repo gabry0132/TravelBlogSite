@@ -1,0 +1,39 @@
+   Initiate Server Command:
+node C:\java_workspace\JV16\blog_site\server.js
+
+forgotPass.jspのOTP送信機能が新しいページを呼ばずにメールを送信しようとしています。
+そのため、JSP側ではなく、JavaScriptで送信することになります。
+
+SMTPライブラリーをそのまま使うと2025年1月にGoogleの方針変更で動けなくなる可能性があります。
+その代わりにsendgridのAPIを使いたいと思います。
+
+無料プランなので1日に100メールの制限があるのですが、充分です。
+
+この後、JSPで同じような機能を追加する時に、forgotPass.jspの為に作成するGmailアカウントを使うつもりです。
+アカウント設定は次の通りです：
+First Name: 旅行ブログ自動送信システム
+Birthday: January 1st, 1990
+Gender: Male
+Mail address: blogsite.renraku@gmail.com
+Password: blogsite_soushin_pass
+Recovery address: not set
+Recovery phone number: my phone number (***-****-**02)
+
+SendGrid apy keyは環境変数に保存されています。
+
+メール送信するファイルはsendEmail.jsで、実行するのは同じフォルダのserver.jsp
+サーバーを起動するためには cmd を開いて、次のコマンドを実行：
+
+node C:\java_workspace\JV16\blog_site\server.js
+
+起動するポートはserver.jsファイルには選べられます。今は3000になっています。CORSを利用して、別のポート(8080)から来るデータを受け取ります。
+
+////////////////////////////////////////////////////////
+
+メール送信だけでなく、MySqlと繋がって記事の「いいね！」ボタンを押したときにデータベースに登録しに行くEndpointも追加しました。
+
+同じサーバーが2つのapp.post()で待っています。
+両方メール送信機能といいね！登録が同じserver.jsで実行しますので実行の仕方が変わりません。
+
+
+node C:\java_workspace\JV16\blog_site\server.js

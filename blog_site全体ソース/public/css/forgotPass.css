@@ -1,0 +1,85 @@
+h1{
+    text-align: center;
+    margin: 7% auto 4% auto;
+}
+
+form{
+    margin: auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+p.input-field-intro{
+    margin: 0px auto 0px 0px;
+}
+
+input.basic-text-field{
+    margin: 0px auto 20px auto;
+    width: 100%;
+    height: 40px;
+    font-size: 1.6rem;
+}
+
+button#sendOTP{
+    margin: 30px auto 50px auto;
+}
+
+div.buttons-wrapper{
+    width: 100%;
+    margin: 6% auto 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+button#sendOTP{
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button#sendOTP:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+a#cancel{
+    border: 2px solid #000;
+    width: fit-content;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+a#cancel:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button.basic-submit{
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.basic-submit:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div.text-wrapper{
+    display: flex;
+}
+
+
+span#username-valid-marker,
+span#email-valid-marker{
+    color: #f00;
+}

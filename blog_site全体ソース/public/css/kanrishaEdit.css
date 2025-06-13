@@ -1,0 +1,90 @@
+h1{
+    text-align: center;
+    margin: 7% auto 10% auto;
+}
+
+body div#everything-wrapper{
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+p.intro{
+    font-size: 1.2rem;
+    margin: 0px;
+    padding-left: 50px;
+}
+
+p.checkbox-text{
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+div#buttons-wrapper{
+    width: 80%;
+    margin: 40px auto 0px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+div#text-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+button.basic-clear{
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.basic-clear:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+form#main-form{
+    display: flex;
+    flex-direction: column;
+}
+
+button.basic-delete{
+    background-color: #f6c6ad;
+    width: fit-content;
+    margin: 0px auto 0px auto; 
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.basic-delete:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+textarea{
+    resize: none;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+div#checkbox-wrapper{
+    width: fit-content;
+    justify-content: space-around;
+    display: flex;
+}
+
+a{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    text-decoration: none;
+}
+
+input#mail-send-checkbox{
+    scale: 1.2;
+    margin: -2px 5px 0px 0px;
+}

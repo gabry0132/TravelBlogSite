@@ -1,0 +1,8 @@
+body{
+    /* これを変更するとarticle.htmlの「いいね！」ボタンのアニメーションが醜くなります */
+    /* さらにaddArticle.jsの全ての画像選択ツール(input type="file")のcssで文字を隠すためにこの色で設定しています（変更の際cssで2か所変更必要） */
+    background-color: #f9eeee;  
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}

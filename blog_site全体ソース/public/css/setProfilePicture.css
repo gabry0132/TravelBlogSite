@@ -1,0 +1,81 @@
+h1{
+    text-align: center;
+    margin: 7% auto 7% auto;
+}
+
+body div#everything-wrapper{
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+p#picture-instructions{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0px 0px 60px 0px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+input#image-picker{
+    margin: 0px auto 30px auto;
+    content: "";
+}
+input#image-picker::file-selector-button{
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+input#image-picker::file-selector-button:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#buttons-wrapper{
+    width: 100%;
+    margin: 10% auto 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#image-wrapper{
+    width: 300px;
+    height: 300px;
+    border: none;   /* JSで border: 2px solid #000 に切り替えます */   
+    border-radius: 50%;
+    background-size: cover;
+}
+
+button.basic-clear{
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.basic-clear:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button.basic-submit{
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.basic-submit:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+

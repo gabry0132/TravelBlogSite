@@ -1,0 +1,423 @@
+div#body-megawrapper{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 7% auto 7% auto;
+    width: fit-content;
+}
+
+p#top-description{
+    width: 1000px;
+    margin: 0px auto 5% auto;
+    font-size: 1.5rem;
+}
+
+div#search-explanation-container{
+    margin-bottom: 30px;
+}
+div#search-explanation-container p#search-explanation{
+    text-align: center;
+}
+
+div#article-holder{
+    width: 85%;
+    margin: 0px auto 0px auto;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div#article-holder div.article{
+    display: none;
+    width: 300px;
+    height: 370px;
+    border: 3px solid black;
+    transition: all .15s ease-in-out; 
+    margin-bottom: 7%;
+    border-radius: 50px;
+    background-color: #fff;
+
+}
+div#article-holder div.article:hover{
+    cursor: pointer;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#article-holder div.article div.img-holder{
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    background-size: cover;
+}
+
+/* NEWを表示する設定。固定の例になっています。 */
+div#article-holder div.article div.img-holder div.unread-header{
+    display: flex;  /* noneとflexの交換で表示/非表示する */
+    width: 100%;
+    vertical-align: middle;
+    height: 15%;
+    border-radius: 50px 50px 00px 00px;
+    background-color: #dbbd13bb;
+}
+div#article-holder div.article div.img-holder div.unread-header p.new-text{
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+div#article-holder div.article div.title-holder{
+    width: 300px;
+    height: 70px;
+    line-height: 70px;  /* 長さと一致しないと真ん中に来ません */
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 40px;
+}
+
+button.basic-clear{
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    padding: 0px 3px 0px 3px;
+    transition: 0.3s;
+}
+button.basic-clear:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button.kanrisha-menu{
+    display: none;  /* 管理者であればJSでblockに切り替えます */
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.kanrisha-menu:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button#search-submit{
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button#search-submit:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+a{
+    width: fit-content;
+    margin: auto;
+}
+
+div#page-selector{
+    display: flex;
+    width: fit-content;
+    margin: 0px auto 3% auto;
+    justify-content: space-around;
+
+}
+
+div#page-selector span.page-count{
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 12px 12px;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(238, 245, 250);
+    margin: 0px 10px 0px 10px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+div#page-selector span.page-count:hover,
+div#page-selector span.current-selected:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#page-selector span.current-selected{
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 12px 12px;
+    width: 15px;
+    height: 15px;
+    background-color: #cbe4f3;
+    margin: 0px 10px 0px 10px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+/* ホーバーガーメニューの設定はここから */
+
+nav#left-side-nav{
+    display: flex;
+    position: fixed;
+    top: 10%;
+    left: -38px;
+    width: 153px;
+    height: 542px;
+    z-index: 2;
+    transition: transform 0.15s;
+}
+
+div#sideMenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 700px;
+    height: 530px;
+    top: 9px;
+    left: -660px;
+    background-image: url(../images/homepage-envelope.png);
+    background-size: cover;
+}
+div#sideMenu h3{
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+div#sideMenu div#sort-menu{
+    margin: 0px auto 0px 80px;
+}
+div#sideMenu div#sort-menu h4,
+div#sideMenu div#search-menu h4{
+    font-size: 1.2rem;
+    margin: 0px 0px 10px 0px;
+}
+div#sideMenu div#sort-menu form,
+div#sideMenu div#search-menu form#search-form{
+    margin: 0px auto 0px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+div#sideMenu div#sort-menu form select{
+    margin: 0px auto 10px auto;
+    font-size: 1.1rem;
+    padding: 3px;
+    border-radius: 10px;
+    min-width: 100px;
+}
+div#sideMenu div#sort-menu form button#sort-submit{
+    width: fit-content;
+    margin-top: 10px;
+    background-color: #82cf56;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+div#sideMenu div#sort-menu form button#sort-submit:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+
+}
+
+div#dropdown-menus-wrapper{
+    position: relative;
+    left: -100px;
+    display: flex;
+    width: 350px;
+    height: fit-content;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+div#like-checkbox{
+    position: relative;
+    left: -30px;
+    display: flex;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+div#like-checkbox input#search-liked-checkbox{
+    scale: 1.2;
+}
+
+div#sideMenu div#search-menu{
+    position: absolute;
+    width: 220px;
+    top: 72px;
+    left: 370px;
+}
+div#sideMenu div#search-menu form#search-form div#date-section{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+div#sideMenu div#search-menu form#search-form div#season-section,
+div#sideMenu div#search-menu form#search-form div#prefecture-section{
+    display: flex;
+    margin: 0px 25px 10px 0px;
+    height: fit-content;
+    justify-content: space-between;
+    vertical-align: middle;
+    p.search-menu-text{ /* わざと上書きします */
+        text-align: right;
+        margin-right: 5px;
+    }
+}
+div#sideMenu div#search-menu form#search-form div#season-section select#search-season,
+div#sideMenu div#search-menu form#search-form div#prefecture-section select#search-prefecture{
+    margin: 0px 5px 0px 0px;
+    font-size: 1.1rem;
+    padding: 3px;
+    border-radius: 10px;
+    min-width: 100px;
+}
+div#sideMenu div#search-menu form#search-form div#season-section{
+    margin-right: 8px;
+}
+    
+div#search-buttons-holder{
+    display: flex;
+    margin: 15px 0px 0px 0px;
+    justify-content: space-between;
+}
+
+div#sideMenu div#search-menu form#search-form div#date-section p.karamade{
+    font-size: 0.8rem;
+    text-align: right;
+    margin: 2px 0px 8px 0px;
+}
+
+div.search-top-text{
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+div.search-top-text input{
+    min-width: 120px;
+    height: fit-content;
+    margin: auto;
+    font-size: 0.9rem;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+p.search-menu-text{
+    width: 100%;
+    text-align: center;
+    margin: auto 0px auto 0px;
+    cursor: default;
+}
+
+div#hitboxes{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/homepage-nav.png);
+}
+
+div#hitboxes div#enter-hitbox{
+    position: absolute;
+    top: 8px;
+    width: 85px;
+    height: 530px;
+    /* background-color: #00f8; */
+}
+
+div#exit-hitbox{
+    position: fixed;
+    top: 0px;
+    left: 70px;
+    width: 500px;
+    height: 100vh;
+    z-index: -1;
+    transition: transform 0.15s;
+    /* background-color: #bb383888; */
+}
+
+div#external-links{
+    position: absolute;
+    top: 350px;
+    left: 80px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+div#external-links h4{
+    margin-bottom: 10px ;
+}
+
+div#external-links table{
+    margin-left: -20px;
+}
+div#external-links table tr td{
+    padding: 0px 0px 20px 0px;
+}
+div#external-links table tr td#logout-wrapper{
+    display: flex;
+}
+
+
+div#external-links a.simple-link{
+    margin: 0px 0px 15px 0px;
+    color: #000;
+    vertical-align: middle;
+    /* text-decoration: none; */
+    border-radius: 7px;
+    padding: 0px 10px 0px 10px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#c1e5f5, #c1e5f5);
+    transition: 0.5s;
+    background-size: 0 100%;
+}
+div#external-links a.simple-link:hover{
+    box-shadow: 0 0 10px #0008, 0 0 10px #0008;
+    background-size: 100% 100%;
+}
+div#external-links a#newsletter-link{
+    background-image: linear-gradient(#73d645, #73d645);    /* 未登録の場合は#73d645,登録済みの場合は#c1e5f5。JSで設定しています */
+}
+
+div#external-links form button#logout{
+    background-color: #b67e35;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+div#external-links form button#logout:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+form#logout-wrapper-form{
+    width: fit-content;
+    margin: 0px auto 0px auto;
+}
+
+/* ホーバーメニューの設定はここまで */
+
+body div#page-dimmer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    background: #000000b3;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: opacity 0.3s;
+}

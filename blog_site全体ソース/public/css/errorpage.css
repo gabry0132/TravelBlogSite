@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    margin: 7% auto 10% auto;
+}
+
+body div#everything-wrapper{
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+p#intro{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+p#description{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+button.back-button{
+    margin: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.back-button:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+form {
+    display: flex;
+    text-decoration: none;
+    width: fit-content;
+    margin: auto;
+}

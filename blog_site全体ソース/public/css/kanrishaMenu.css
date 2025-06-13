@@ -1,0 +1,94 @@
+h1{
+    text-align: center;
+    margin: 7% auto 7% auto;
+}
+
+body div#everything-wrapper{
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div#base-buttons-wrapper{
+    margin: 0px auto 30px auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+button.basic-clear{
+    margin: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.basic-clear:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+a.base-anchor{
+    margin: 0px auto 20px auto;
+    width: fit-content;
+}
+
+button.basic-submit{
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    padding: 20px;
+}
+button.basic-submit:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#tsuika-button-wrapper{
+    width: fit-content;
+    margin: auto;
+}
+
+button.back-button{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button.back-button:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0px auto 70px auto ;
+}
+
+div#updateNum{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+input#articlesPerPageUpdate{
+    width: 50px;
+    height: 25px;
+    font-size: 1.3rem;
+    margin: auto 10px auto 0px;
+}
+
+p.input-field-intro{
+    margin: 0px auto 5px auto;
+}

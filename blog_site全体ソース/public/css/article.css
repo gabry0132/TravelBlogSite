@@ -1,0 +1,371 @@
+h1{
+    text-align: center;
+    margin: 7% auto 5% auto;
+}
+
+body div#everything-wrapper{
+    display: flex;
+    margin: 0 auto 20px auto;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+div#all-images-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+div#main-image-wrapper{
+    margin: 0px auto 6% auto;
+    width: 400px;
+    height: 400px;
+    /* background-color: blue; */
+    background-size: cover;
+
+}
+
+h2#article-subtitle{
+    margin: 0px auto 10% auto;
+}
+
+div#paragraphs-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+div#paragraphs-wrapper div.extra-image{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
+
+table.paragraph{
+    margin: 0px auto 70px auto;
+}
+table.paragraph tr th.image-th{
+    width: 1%;
+}
+table.paragraph tr th.paragraph-title-th{
+    text-align: left;
+    padding: 0px 0px 20px 10%;
+    height: 50px;
+    font-size: 1.6rem;
+}
+table.paragraph tr td.paragraph-text{ 
+    vertical-align: top;
+    padding-left: 30px;
+    font-size: 1.2rem;
+}
+
+table#paragraph-container2 tr th.paragraph-title-th{
+    text-align: right;
+    padding: 0px 10% 20px 0px;
+    height: 50px;
+}
+table#paragraph-container2 tr td.paragraph-text{ 
+    text-align: left;
+    vertical-align: top;
+    padding-right: 30px;
+}
+
+div.extra-image-description{
+    position: absolute;
+    display: flex;  
+    width: 100%;
+    height: 0px; /* JSで40pxになります */
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7;
+    transition: height .15s;
+}
+div.extra-image-description p.image-description-text{
+    display: none;  /* JSでflexに切り替える */
+    margin: auto;
+    font-size: 16px;
+    color: #fff;
+}
+
+div.previous-next-holder{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+div.previous-next-holder:nth-child(1){
+    top: 520px;
+}
+div.previous-next-holder p.previous{
+    text-align: left;
+}
+div.previous-next-holder p.next{
+    text-align: right;
+}
+div.previous-next-holder p.previous:hover,
+div.previous-next-holder p.next:hover{
+    cursor: pointer;
+}
+
+div#iploadDate-wrapper{
+    display: flex;
+    width: 80%;
+    margin: -60px auto 20px 7%;
+    text-align: right;
+}
+p#uploadDate{
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+div#like-wrapper{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+div#like-wrapper video#like-animation:hover,
+div#like-wrapper p#like:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+p.section-intro{
+    margin: 3px auto 10px 3px;
+}
+
+div#comment-wrapper{
+    width: 90%;
+    margin: auto auto 3% auto;
+}
+
+textarea.comment-textarea{
+    resize: none;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+div.pfp-name-wrapper{
+    display: flex;
+    width: fit-content;
+}
+div.pfp-name-wrapper img.pfp{
+    border: 0.1px solid #000;
+    border-radius: 50%;
+}
+
+
+div#comment-wrapper div#buttons-wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    margin: auto;
+}
+
+div#comment-wrapper div#comment-intro-text-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+div#comment-wrapper div#comment-intro-text-wrapper span#comment-valid-marker{
+    color: red;
+    font-size: 0.8rem;
+    margin: auto 0px 0px 0px;
+}
+
+div#comment-wrapper button.basic-clear{
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+div#comment-wrapper button.basic-clear:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#comment-wrapper button.basic-submit{
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+div#comment-wrapper button.basic-submit:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#all-comments-wrapper{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding: 0px 5% 1% 5%;
+    flex-direction: column;
+    /* border: 0.2px solid; */
+}
+div#all-comments-wrapper p#no-comments{
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 50px auto 50px auto;
+}
+
+div#all-comments-wrapper div.user-comment-wrapper{
+    width: 90%;
+    padding: 3%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+div#all-comments-wrapper div.user-comment-wrapper:hover{
+    background-color: #d3caca
+}
+div#all-comments-wrapper div.user-comment-wrapper p.user-comment{
+    margin: 0px;
+    font-size: 1rem;
+    word-break: break-all;
+    white-space: normal;
+}
+div#all-comments-wrapper div.user-comment-wrapper div.text-wrapper{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+a.comment-edit-anchor,
+a.comment-reply-anchor{
+    text-decoration: none;
+    width: fit-content;
+    margin-right: 20px;
+}
+div#all-comments-wrapper div.user-comment-wrapper div.text-wrapper p{
+    width: fit-content;
+    margin: 0px;
+}
+div#all-comments-wrapper div.user-comment-wrapper div.text-wrapper p.username{
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0px 0px 0px 0px;
+}
+
+button.edit-comment{
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    display: flex;  /* 自分のコメントのボタンが見えるようになるのでJSでflexにしています。 */
+}
+button.edit-comment:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button.reply-comment{
+    background-color: #e6fc24b7;    /* div.author-reply-wrapperと同じ背景色にする */
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+    display: flex;  /* JSでnoneに切り替えます */
+}
+button.reply-comment:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div.comment-anchors-wrapper{
+    display: flex;
+}
+
+div.author-reply-wrapper{
+    display: none;     /* JSで block に切り替えます */
+    width: 90%;
+    margin: 10px auto 0px auto;
+    /* background-color: #e6fc24b7; */ /* button.reply-commentと同じ背景色にする - JSで表示の管理を行います。 */
+}
+div.author-reply-wrapper p.author-reply{
+    font-size: 1rem;
+    margin: 20px;
+}
+
+button#topmost{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+form#bottommost-form{
+    width: fit-content;
+    margin: auto auto 4% auto;
+}
+button#bottommost{
+    margin: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+
+button.back-button:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button#edit-button{
+    display: none; /* JSでblockに切り替えます */
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: #c1e5f5;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+button#edit-button:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+div#koushin-marker{
+    display: flex;
+    width: 230px;
+    height: 0px;    /* JSでautoに切り替えます */
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    background-color: #0be10b;
+    z-index: 5;
+    transition: height 0.3s;  
+}
+div#koushin-marker p#koushin-text{
+    display: none;  /* JSでflexに切り替えます */
+    margin: auto;
+}
+
+div#like-counter{
+    display: none;  /* JSでblockに切り替えます */
+    border-bottom: 1px solid #836913;
+    width: fit-content;
+    margin: 0px auto 30px auto;
+}
+div#like-counter p#like-count{
+    text-align: center;
+    margin: 0px auto 0px auto;
+    padding: 0px 10px 0px 7px;
+}

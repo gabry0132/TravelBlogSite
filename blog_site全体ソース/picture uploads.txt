@@ -1,0 +1,20 @@
+アカウント作成する際にユーザーが画像をアップロードする必要があって、それをサーバー上に登録するためにApacheのライブラリーを導入しました。
+
+Library: Apache Commons FileUpload
+link: https://commons.apache.org/proper/commons-fileupload/ 
+Added JAR files: commons-fileupload2-core-2.0.0-M2.jar AND commons-fileupload2-javax-2.0.0-M2.jar
+
+画像の保存をservletで行ってから次のページへ自動的に移動させる。
+
+servletはFileUpload、FileUpload.javaは「JV16/WEB-inf/src/default-package」にあります。（クラスで作ったservletと同じ所）。
+
+使用場合は２つだてです：
+
+１. setProfilePicture.js (画像ファイルを選択) > FileUpload (画像ファイルを保存) > accCreated.jsp (画像ファイル名をデータベースに登録)
+２. updateProfilePicture.js (画像ファイルを選択) > FileUpload (画像ファイルを保存) > koushinkanryo.jsp (画像ファイル名をデータベースに更新)
+
+場合によって保存場所が変わります。FileUploadでrequestのstatusパラメータを見て判断します。
+プログラムの外に保存している理由は安定のためです。実行中に画像を保存すると、保存処理が遅い・上手くいかないこともあるらしいです。
+
+１. C:\Users\pipit\blog_site_uploads\profile_pictures
+２. C:\Users\pipit\blog_site_uploads\article_pictures
